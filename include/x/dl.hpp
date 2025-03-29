@@ -2,7 +2,9 @@
 
 #include <string>
 
-#include <Windows.h>
+#if defined(_WIN32)
+    #include <Windows.h>
+#endif
 
 namespace x {
 
@@ -27,7 +29,11 @@ public:
     friend void swap(Library& lhs, Library& rhs) noexcept;
 
 private:
+#if defined(_WIN32)
     HINSTANCE _library = nullptr;
+#elif defined(__linux__)
+    void* _handle = nullptr;
+#endif
 };
 
 } // namespace x
