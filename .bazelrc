@@ -1,2 +1,4 @@
 common --registry=https://raw.githubusercontent.com/snailbaron/registry/main
 common --registry=https://bcr.bazel.build
+
+common --cxxopt=-std=c++23

@@ -1,14 +1,9 @@
 module(
     name = "x",
-    version = "0.1.0",
+    version = "0.1.1",
 )
 
 bazel_dep(name = "rules_cc", version = "0.1.1")
-bazel_dep(name = "toolchains", version = "0.1.1")
-
-register_toolchains(
-    "@toolchains//:linux_x86_64_clang",
-)
 
 # Hedron's Compile Commands Extractor for Bazel
 # https://github.com/hedronvision/bazel-compile-commands-extractor
