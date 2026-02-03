@@ -15,4 +15,5 @@ cc_library(
     ],
     hdrs = ["include/x.hpp"],
     copts = ["-Iinclude"],
+    visibility = ["//visibility:public"],
 )
